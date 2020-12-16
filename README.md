@@ -4,3 +4,12 @@ Flying has been the go-to mode of travel for years now; it is time-saving, affor
 The aim is to build Machine Learning models to anticipate and classify the severity of any airplane accident based on past incidents. With this, all airlines, even the entire aviation industry, can predict the severity of airplane accidents caused due to various factors and, correspondingly, have a plan of action to minimize the risk associated with them.
 
 In this project, we will be comparing Bagging Methods with Bossting Methods to see which one gives a better accuracy. We will be using Decision Tree Classifier, Random Forest, Adaptive Boosting Classifier, Gradient Boosting Classifier and XGBoost Classifier.
+
+## Results
+|Classifier | With Safety Score (accuracy %) | Without Safety Score (accuracy %) |
+| --- | --- | --- |
+|Decision Tree Classifier |  94.54 | 53.73 |
+|Random Forest Classifier |  89.92 | 66.60 |
+|Gradient Boosting Classifier |  96.87 | 64.80 |
+|Adaptive Boosting Classifier |  94.94 | 64.93 |
+|XGBoost Classifier |  96.4 | 70.07 |
