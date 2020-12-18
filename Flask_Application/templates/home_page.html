@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>flask app</title>
+
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  </head>
+  <body>
+    <p><br></p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+                            <H1 class="navbar">Airplane Accident Severity Predictor</H1>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="jumbotron">
+                            <h2>
+                                Enter the parameters:
+                            </h2>
+                                <form action="{{ url_for('predict') }}" method="POST">
+                                <div class="form-group">
+                                    
+                                    <label for="Safety_Score">
+                                        Safety Score
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Safety_Score" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Days_Since_Inspection">
+                                        Days Since Inspection
+                                    </label>
+                                    <input type="number" class="form-control" name="Days_Since_Inspection" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Total_Safety_Complaints">
+                                        Total Safety Complaints
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Total_Safety_Complaints" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Control_Metric">
+                                        Control Metric
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Control_Metric" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Turbulence_In_gforces">
+                                        Turbulence in g forces
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Turbulence_In_gforces" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Cabin_Temperature">
+                                        Cabin Temprature
+                                    </label>
+                                    <input type="number" step="0.01" class="form-control" name="Cabin_Temperature" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Accident_Type_Code">
+                                        Accident Type Code (1 to 7)
+                                    </label>
+                                    <input type="number" class="form-control" name="Accident_Type_Code" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Max_Elevation">
+                                        Max Elevation
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Max_Elevation" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Violations">
+                                        Violations (0 to 5)
+                                    </label>
+                                    <input type="number" class="form-control" name="Violations" required="required">
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <label for="Adverse_Weather_Metric">
+                                        Adverse Weather Metric
+                                    </label>
+                                    <input type="number" step="0.0001" class="form-control" name="Adverse_Weather_Metric" required="required">
+                                </div>
+                                
+             
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                        <p>
+                            <a class="btn" href="https://github.com/chawla201/Airplane-Accident-Severity-Prediction">View Source</a> 
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>
