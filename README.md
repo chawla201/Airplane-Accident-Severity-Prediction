@@ -1,9 +1,32 @@
 # Airplane Accident Severity Prediction
 Flying has been the go-to mode of travel for years now; it is time-saving, affordable, and extremely convenient. According to the FAA, 2,781,971 passengers fly every day in the US, as in June 2019. Passengers reckon that flying is very safe, considering strict inspections are conducted and security measures are taken to avoid and/or mitigate any mishappenings. However, there remain a few chances of unfortunate incidents.
 
-The aim is to build Machine Learning models to anticipate and classify the severity of any airplane accident based on past incidents. With this, all airlines, even the entire aviation industry, can predict the severity of airplane accidents caused due to various factors and, correspondingly, have a plan of action to minimize the risk associated with them.
+## tl;dr
+* Compared different ensemble learning models to find the best fit for the data
+* Created a flask application using HTML and Bootsrap to deploy the Machine Learning model
 
-In this project, we will be comparing Bagging Methods with Bossting Methods to see which one gives a better accuracy. We will be using Decision Tree Classifier, Random Forest, Adaptive Boosting Classifier, Gradient Boosting Classifier and XGBoost Classifier.
+
+## Technologies Used
+    
+* <strong>Python</strong>
+* <strong>Pandas</strong>
+* <strong>Numpy</strong>
+* <strong>Matplotlib</strong>
+* <strong>Seaborn</strong>
+* <strong>Scikit Learn</strong>
+* <strong>Ensemble Learning</strong>
+* <strong>Flask</strong>
+* <strong>Bootstrap</strong>
+* <strong>HTML</strong>
+* <strong>CSS</strong>
+
+## Data
+The dataset consists of certain parameters recorded during the incident⁠ such as cabin temperature, turbulence experienced, number of safety complaints prior to the accident, number of days since the last inspection was conducted before the incident, an estimation of the pilot’s control given the various factors at play, and the likes. 
+
+### Pairplot of the data
+<p align="center">
+  <img src="https://github.com/chawla201/Airplane-Accident-Severity-Prediction/blob/master/images/pairplot.png" width=600>
+</p>
 
 ## Results
 |Classifier | With Safety Score (accuracy %) | Without Safety Score (accuracy %) |
@@ -13,3 +36,12 @@ In this project, we will be comparing Bagging Methods with Bossting Methods to s
 |Gradient Boosting Classifier |  96.87 | 64.80 |
 |Adaptive Boosting Classifier |  94.94 | 64.93 |
 |XGBoost Classifier |  96.4 | 70.07 |
+
+## Model Deployment
+Developed a simple web application using <strong>Flask</strong> and <strong>Bootstrap</strong> to deploy the Gradient Boosting Classifier
+
+## Screenshots
+<p align="center">
+  <img src="https://github.com/chawla201/Airplane-Accident-Severity-Prediction/blob/master/images/home_page.png" width=600>
+  <img src="https://github.com/chawla201/Airplane-Accident-Severity-Prediction/blob/master/images/prediction.png" width=600>
+</p>
