@@ -13,7 +13,7 @@ mkl-random==1.0.2
 mkl-service==2.3.0
 numpy==1.19.4
 pandas==1.1.5
-Pillow==8.1.1
+Pillow==9.0.1
 pyparsing==2.4.7
 python-dateutil==2.8.1
 pytz==2020.4
